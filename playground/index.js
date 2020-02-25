@@ -57,4 +57,7 @@ var person = {
 // 참조 값을 복사
 var copy = person;
 
+copy.age = 1;
+
 console.log(copy);
+console.log(person);
