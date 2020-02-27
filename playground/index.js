@@ -61,3 +61,15 @@ copy.age = 1;
 
 console.log(copy);
 console.log(person);
+
+
+var person1 = {
+  name: 'Lee'
+};
+
+var person2 = {
+  name: 'Lee'
+};
+
+console.log(person1 === person2); // ①
+console.log(person1.name === person2.name); // ②
