@@ -21,6 +21,7 @@ module.exports = {
     "comma-dangle": [ "error", "never"],
     "no-var": 0,
     "linebreak-style": 0,
-    "no-unused-vars": 0
+    "no-unused-vars": 0,
+    "no-var":2
   }
 };

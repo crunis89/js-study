@@ -55,5 +55,23 @@
             <p>스코프내에서 let , const 키워드는 중복선언을 허용하지 않으며 SyntaxError: Identifier 'x' has already been declared 등의 에러가 뜬다 </p>
         </article>
     </section>
+    <button class="my-btn">
+        Click me
+    </button>
+    
+    <div class="box">
+        test
+    </div>
+    <script> //접근자 프로퍼티
+        const $box = document.querySelector('.box');
+        $box.textContent = 'Hello';
+    </script>
+
+    <script>
+        const btn = document.querySelector('.my-btn');
+        btn.addEventListener('click',function (){
+            console.log('click !!!');
+        });
+    </script>
 </body>
 </html>
