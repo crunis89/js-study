@@ -1,0 +1,23 @@
+
+get / set 가 붙으면 뒤에있는 것은 메서드처럼 보이지만 프로퍼티처럼 쓴다( 접근자프로퍼트)
+
+const person = {
+  // 데이터 프로퍼티
+  firstName: 'Ungmo',
+  lastName: 'Lee',
+
+  getFullname( ) {
+	return `${this.firstName} ${this.lastName}`;
+  },
+  setFullName(name) {
+	[this.firstName, this.lastName] = name.split(' ')	; //['foo', 'bar']
+  }
+};
+person.setFullName('foo bar');
+
+
+//메서드 만드는법
+foo( ) {
+
+
+}
