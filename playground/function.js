@@ -94,7 +94,6 @@
 // //     console.log(num);
 // //   }  
 
-<<<<<<< HEAD
 // 제어문 문제
 // var x = 15;
 // if (x > 10 && x < 20){
@@ -129,7 +128,6 @@ for(var i = 1; i <= 6; i++){
   }
   
 }
-=======
 // //   function odd(num){
 // //   if (num % 2) console.log(num);
 // //   }
@@ -223,4 +221,10 @@ const person = {
 };
 person.fullName = 'foo bar';
 console.log(person);
->>>>>>> b1f210929928321a64a1e0bdf2271d1c3ef1b399
+
+var name = 'Lee';
+function sayH1(){
+  console.log(`Hi, ${name}`);
+}
+name = `Kim`;
+sayH1();
