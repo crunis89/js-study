@@ -80,15 +80,37 @@ function outer() {
 
 outer();
 
-// n만큼 어떤 일을 반복한다
-function repeat(n) {
-  // i를 출력한다.
-  for (var i = 0; i < n; i++) console.log(i);
+// 제어문 문제
+// var x = 15;
+// if (x > 10 && x < 20){
+// console.log(x);
+// }
+
+// for (var i = 0; i < 10; i++) {
+//   if (i % 2 === 0)
+//   console.log(i);
+// }
+
+for (even = 0; even < 10; even++) {
+  if (!(even % 2)) console.log(even);
 }
 
-repeat(8); // 0 1 2 3 4
+let bar = 123;
+console.log(bar);
 
+var str = "";
 
-console.log[1,2,3,4,5].map(function (v){
-  return v *2;
-}));
+for (var i = 0; i < 10; i++) {
+  if (i % 2 === 0) {
+    str += i;
+  }
+}
+console.log(str);
+
+for(var i = 1; i <= 6; i++){
+  for(var j = 1; j <= 6; i++)
+  if(i + j === 6){
+    console.log(['i','+','j']);
+  }
+  
+}
