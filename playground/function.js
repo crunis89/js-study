@@ -94,6 +94,40 @@
 // //     console.log(num);
 // //   }  
 
+// 제어문 문제
+// var x = 15;
+// if (x > 10 && x < 20){
+// console.log(x);
+// }
+
+// for (var i = 0; i < 10; i++) {
+//   if (i % 2 === 0)
+//   console.log(i);
+// }
+
+for (even = 0; even < 10; even++) {
+  if (!(even % 2)) console.log(even);
+}
+
+let bar = 123;
+console.log(bar);
+
+var str = "";
+
+for (var i = 0; i < 10; i++) {
+  if (i % 2 === 0) {
+    str += i;
+  }
+}
+console.log(str);
+
+for(var i = 1; i <= 6; i++){
+  for(var j = 1; j <= 6; i++)
+  if(i + j === 6){
+    console.log(['i','+','j']);
+  }
+  
+}
 // //   function odd(num){
 // //   if (num % 2) console.log(num);
 // //   }
@@ -285,3 +319,24 @@ const x = {};
 x.a = 1;
 
 console.log(x.a);
+const person = {
+  // 데이터 프로퍼티
+  firstName: 'Ungmo',
+  lastName: 'Lee',
+
+  get fullName() {
+	return `${this.firstName} ${this.lastName}`;
+  },
+  set fullName(name) {
+	[this.firstName, this.lastName] = name.split(' ')	; //['foo', 'bar']
+  },
+};
+person.fullName = 'foo bar';
+console.log(person);
+
+var name = 'Lee';
+function sayH1(){
+  console.log(`Hi, ${name}`);
+}
+name = `Kim`;
+sayH1();
