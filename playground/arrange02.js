@@ -23,26 +23,55 @@
 // // 메소드 호출
 // console.log(x + y); // 3
 
-var x = 1; //전역객체 프로퍼티
-const y = 2; //전역스코프
+// var x = 1; //전역객체 프로퍼티
+// const y = 2; //전역스코프
 
-function foo (a) {
-  var x = 3;
-  const y = 4;
+// function foo (a) {
+//   var x = 3;
+//   const y = 4;
 
-  function bar (b) {
-    const z = 5;
-    console.log(a + b + x + y + z);
+//   function bar (b) {
+//     const z = 5;
+//     console.log(a + b + x + y + z);
+// }
+//   bar(10);
+// }
+
+// foo(20); // 42
+
+// class pperson {
+//   name = 'Lee';
+
+//   constructor(){
+//     console.log(name);
+//   }
+// }
+
+// function add(x,y){
+//   return x + y;
+// }
+// var result = add(3,5);
+// console.log(result);
+
+// function multiply(x,y){
+//   return ;
+// }
+// console.log(multiply(3,5));
+
+
+function factorial(n){
+  if (n <= 1) return 1;
+  return n * factorial(n-1);
 }
-  bar(10);
-}
 
-foo(20); // 42
+console.log(factorial(0));
+console.log(factorial(1));
+console.log(factorial(2));
+console.log(factorial(3));
+console.log(factorial(4));
+console.log(factorial(5));
 
-class pperson {
-  name = 'Lee';
+var x = 10;
 
-  constructor(){
-    console.log(name);
-  }
-}
+x /= 5;
+console.log(x);
