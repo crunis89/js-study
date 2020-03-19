@@ -340,3 +340,21 @@ function sayH1(){
 }
 name = `Kim`;
 sayH1();
+
+function makeCounter(predicate) {
+  let counter = 0;
+  return function () {
+    counter = predicate(counter);
+    return counter;
+  };
+}
+
+function increase(n) {
+  return ++n;
+}
+
+function decrease(n) {
+  return --n;
+}
+
+console.log(counter(increase));
