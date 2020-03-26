@@ -83,17 +83,19 @@
 // ];
 
 // function sortBy(key) {
-//   todos.sort((a,b) => a[key] > b[key] ? :  : a[key] < b[kry] );
-// }0
+//   // todos.sort((a,b) => b -a); //숫자일때 내림차순
 
-// console.log(sortBy('id'));
-/*
-[
-  { id: 1, content: 'Javascript', completed: false },
-  { id: 2, content: 'CSS', completed: true },
-  { id: 3, content: 'HTML', completed: false }
-]
-*/
+//   todos.sort((a,b) => a[key] > b[key] ? 1 : a[key] < b[key] ? -1 : 0));
+// }
+
+// console.log(sortBy('completed'));
+// /*
+// [
+//   { id: 1, content: 'Javascript', completed: false },
+//   { id: 2, content: 'CSS', completed: true },
+//   { id: 3, content: 'HTML', completed: false }
+// ]
+// */
 // console.log(sortBy('content'));
 /*
 [
@@ -134,29 +136,29 @@
 //   { id: 1, content: 'Javascript', completed: false }
 // ]
 // */
-function sayHi(){
-  console.log(`hi`);
-}
+// function sayHi(){
+//   console.log(`hi`);
+// }
 
-const obj = {
-  sayHi};
+// const obj = {
+//   sayHi};
 
-console.log(obj.this);
+// console.log(obj.this);
 
-let todos = [
-  { id: 3, content: 'HTML', completed: false },
-  { id: 2, content: 'CSS', completed: true },
-  { id: 1, content: 'Javascript', completed: false }
-];
+// let todos = [
+//   { id: 3, content: 'HTML', completed: false },
+//   { id: 2, content: 'CSS', completed: true },
+//   { id: 1, content: 'Javascript', completed: false }
+// ];
 
-function removeTodo(id) {
-  todos = todos.filter(todo => todo.id !== id );
-  return todos;
-}
+// function removeTodo(id) {
+//   todos = todos.filter(todo => todo.id !== id );
+//   return todos;
+// }
 
-removeTodo(2);
+// removeTodo(100);
 
-console.log(todos);
+// console.log(todos);
 /*
 [
   { id: 3, content: 'HTML', completed: false },
@@ -172,11 +174,7 @@ console.log(todos);
 // ];
 // //forEach는 리턴값이 무조건 undefind가 나온다
 // function toggleCompletedById(id) {
-//   todos.forEach(todo => {
-//     if(todo.id === id) {
-//       todo completed = !todo.completed
-//     };
-//   })
+//   todo = todos.map(todo => todo.id === id ? { ...todo, completed: !todo.completed } : todo);
 // }
 
 // toggleCompletedById(2);
@@ -200,7 +198,7 @@ console.log(todos);
 // function toggleCompletedAll() {
 //   // todos.forEach(todo => todo.completed =true);
 //   // return todos;
-//   return todos.map(todo => todo.completed =true);
+//   todos = todos.map(todo => todo.completed =true);
 // }
 
 // toggleCompletedAll();
@@ -221,27 +219,27 @@ console.log(todos);
 //   { id: 1, content: 'Javascript', completed: false }
 // ];
 
-// function countCompletedTodos() {
-//   return todos.filter(todo => todo.completed === true).length;
+// function countCompletedTodos() { //completed 는 불리언 갑이다 그래서 굳이 === true를 안해줘도 도출해낼수 있다
+//   return todos.filter(todo => todo.completed).length;
 
 // }
 
 // console.log(countCompletedTodos()); // 1
 
 
-// let todos = [
-//   { id: 3, content: 'HTML', completed: false },
-//   { id: 2, content: 'CSS', completed: true },
-//   { id: 1, content: 'Javascript', completed: false }
-// ];
+let todos = [
+  { id: 3, content: 'HTML', completed: false },
+  { id: 2, content: 'CSS', completed: true },
+  { id: 1, content: 'Javascript', completed: false }
+];
 
-// function getMaxId() {
-//   // return  Math.max(...todos.map(todo => todo.id));
-//   return todos.length ? Math.max(...todos.map(todo => todo.id)) : 0;
+function getMaxId() {
+  // return  Math.max(...todos.map(todo => todo.id));
+  return todos.length ? Math.max(...todos.map(todo => todo.id)) : 0;
 
-// }
+}
 
-// console.log(getMaxId()); // 3
+console.log(getMaxId()); // 3
 
 // 0.함수선언문 함수만드는법
 // 1.객체리터럴쓰느법
@@ -295,21 +293,41 @@ function add(){
 }
 console.log(add);
 
-const age = {
-  old: 30,
-  increase: function() {
-    this.old++;
-  }
-};
 
-people.age = 30;
-
-console.log(people);
-
-function add() {
+//함수선언문
+function aaa(x,y) {
   return x+y;
 }
+aaa(3,5);
+console.log (aaa())
+//객체 리터럴
+const hyj ={
+  name: `yongje`
+};
+//동적할당
+hyj.age = 30;
 
-const student = {
-  name:
+console.log(hyj);
+
+//생성자
+function student(name, age){
+  this.name = name;  
+  this.age = age;
+}
+const heo = new student(`heoyongje`, 30);
+
+console.log(heo);
+
+const school = [1,2,3];
+console.log(school[i]);
+
+
+var x = 15;
+
+if (x > 10 && x < 20) 
+console.log(x);
+
+for (var i =0; i <= 10; i++){
+  for (i )
+  console.log(i);
 }
