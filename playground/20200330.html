@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <!-- <ul>
+      <li class="banana">Apple</li>
+      <li class="banana">Banana</li>
+      <li id="orange">Orange</li>
+    </ul>
+    <script>
+      // id 값이 'banana'인 요소 노드를 탐색하여 반환한다.
+      // 두번째 li 요소가 반환된다.
+      const $elems = document.querySelectorAll('.banana');
+      console.log($elems);
+
+      [...$elems].forEach(elem => {elem.style.color = 'red'});      // 취득한 요소 노드의 style.color 프로퍼티 값을 변경한다.
+      // $elem.style.color = 'blue'; 
+      // $elem.style.backgroundColor = 'yellow';
+    </script> -->
+ 
+<!-- 
+  <button class="btn">Click me!</button>
+  <script>
+  const $button = document.querySelector('.btn');
+    $button.onclick = function(){
+      alert('h1'); //브라우저가 호출/ 브라우저만이 얘가 클릭되었는지 알 수 있다
+    }
+  </script> -->
+
+
+<!--플레이스홀더는 접근성이 안좋으므로 쓰지말자-->
+  <input type="text" placeholder="enter todo!" class="inputTodo">
+  <ul class="todos"></ul>
+</body>
+  <script>
+    const $inputTodo = document.querySelector('.inputTodo');
+    const $todos = document.querySelector('.todos')
+    
+    $inputTodo.onkeyup = function(e){ // 이벤트 앞에있는 것은 대부분 이벤트 대상이다
+      if (e.keyCode !== 13) return;
+      $todos.innerHTML += `<li> <input type="checkbox"> ${$inputTodo.value} <button>x</button></li>`
+      $inputTodo.value ='';
+    }
+  </script>
+</html>

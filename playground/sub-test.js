@@ -40,3 +40,6 @@ student1.prototype.sex = function(){
 }
 const heo = new student1(`yongje`,32);
 heo.sex();
+
+
+
