@@ -32,13 +32,38 @@
   <ul class="todos"></ul>
 </body>
   <script>
+
     const $inputTodo = document.querySelector('.inputTodo');
     const $todos = document.querySelector('.todos')
     
     $inputTodo.onkeyup = function(e){ // 이벤트 앞에있는 것은 대부분 이벤트 대상이다
       if (e.keyCode !== 13) return;
+
       $todos.innerHTML += `<li> <input type="checkbox"> ${$inputTodo.value} <button>x</button></li>`
-      $inputTodo.value ='';
+
+      $inputTodo.value ='';//빈 문자열이기 때문에 동작이 다끝나면 인풋안에 내용이 없어진다
     }
   </script>
 </html>
+<!--keyup,down 앞에 on 을 붙히는 이유는 ??? -->
+<!-- 체인지 이벤트는 값을 변경시키는 것 -->
+<!-- e.target 공부하기 -->
+
+<section>
+  <h2>재생목록</h2>
+  <div class="listContent">
+    <dl>
+      <dt>당신을 위하여</dt>
+      <dd>더크로스</dd>
+      <dd>시간</dd>
+    </dl>
+  </div>
+  <div class="listContent">
+    <dl>
+      <dt>당신을 위하여</dt>
+      <dd>더크로스</dd>
+      <dd>시간</dd>
+    </dl>
+  </div>
+  <button>x</button>
+</section>
