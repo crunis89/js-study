@@ -28,3 +28,4 @@ const heo = new game(99,male);
 // 3.배열 만드는법, 조회하는법
 const num = [1,2,3,4,5];
 console.log(num[i]);
+
