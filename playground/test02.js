@@ -5,11 +5,55 @@
 // var str = x + '';
 // console.log(typeof str, str); 
 
-let a = 1, b = 2;
+// let a = 1, b = 2;
 
-let obj = {
-  a: a,
-  b: b
-};
+// let obj = {
+//   a: a,
+//   b: b
+// }; 
 
-console.log(obj);
+
+// console.log(obj);
+
+// const values = [1, 2, 3, 4, 5, 6];
+
+// const average = values.reduce((acc, cur, i, {length}) => {
+//   return (i === length - 1 ? acc + cur / length : acc + cur)
+// }, 0);
+
+// console.log(average); // 3.5
+
+
+// //최대값구하기
+// const values = [1,2,3,4,5];
+
+// // console.log(values.length ? Math.max(...values) : 0); // 5
+// // const max = values.reduce((acc, cur, i, arr) => {
+// //   acc > cur ? acc : cur
+// // },0);
+
+
+// //중첩배열 평탄화
+// const values = [1, [2, 3], 4, [5, 6]];
+
+// const flatten = values.reduce((acc,cur) => {
+  
+// }, []);
+// // [1] => [1, 2, 3] => [1, 2, 3, 4] => [1, 2, 3, 4, 5, 6]
+
+// console.log(flatten); // [1, 2, 3, 4, 5, 6]
+
+const sum = (...args) => {
+  console.log(Array.isArray(args));
+}
+sum(1,2,3);
+
+var arr1 = [1,2];
+var arr2 = [3,4];
+
+arr1.concat(arr1, [...arr2]);
+console.log(arr1);
+
+const arr = [1,2,3]
+
+var 

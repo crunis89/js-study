@@ -1,0 +1,47 @@
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #fruits{
+      display: flex;
+      list-style: none;
+      margin:50px;
+    }
+    #fruits li{
+      margin-right:30px;
+      cursor: pointer;
+    }
+    .active{
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul id="fruits">
+      <li id="apple" class="active">Apple</li>
+      <li id="banana">Banana</li>
+      <li id="orange">Orange</li>
+    </ul>
+  </nav>
+  <em class="msg">apple</em>
+  <script>
+  const $fruits = document.getElementById('fruits');
+  const $msg = document.querySelector('msg');
+    // 일반함수를 쓸지 화살표 함수를 쓸지는 this 여부
+    $fruits.onclick = e => {
+      //1.클릭되어진 놈의 아이디를 가져와보자
+      //2.실제로 이 이벤트를 발생시킨 타겟을 찾자
+
+      if (!e.target.matches('#fruits > li')) return;
+
+      [...$fruits.children].forEach($fruit => {
+      $fruit.classList.toggle('fruit');
+      $fruit.classList.toggle('fruit');  
+      $msg.textContent = e.target.id;
+      )};
+  </script>
+</body>
+</html>
